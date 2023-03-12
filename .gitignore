@@ -2,3 +2,4 @@ app/.gradle/*
 app/build.gradle
 app/settings.gradle
 app/.idea/*
+app/build/*
