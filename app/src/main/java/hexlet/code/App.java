@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class App {
     static Scanner s = new Scanner(System.in);
+
     public static void main(String[] args) throws InterruptedException {
         System.out.println("Welcome to the Brain Games!");
         Thread.sleep(1000);
@@ -14,5 +15,4 @@ public class App {
         System.out.println("Hello, " + name + "!");
         s.close();
     }
-
 }
