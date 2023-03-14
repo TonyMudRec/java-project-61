@@ -1,13 +1,13 @@
-import java.util.Scanner;
+package hexlet.code;
 
 public class Even extends Game {
-
     int randomValue;
-    String answer;
     String correctAnswer;
 
     @Override
     public void game() {
+        String answer = null;
+        boolean winGame = false;
         Cli.greetings();
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
         while (gameMusGoOn) {
@@ -25,12 +25,13 @@ public class Even extends Game {
                 gameMusGoOn = false;
             }
         }
-        System.out.println(endGame(Cli.NAME, winGame));
+        System.out.println(endGame(Cli.name, answer, winGame));
     }
 
     @Override
-    public String endGame(String name, boolean winGame) {
-        return winGame ? "Congratulations, " + name + "!" : "'" + answer + "' is wrong answer ;(. Correct answer was '" + correctAnswer + "'." + "\n" + "Let's try again, " + name + "!";
+    public String endGame(String name, String answer, boolean winGame) {
+        return winGame ? "Congratulations, " + name + "!" : "'" + answer + "' is wrong answer ;(. Correct answer was '"
+                + correctAnswer + "'." + "\n" + "Let's try again, " + name + "!";
     }
 
     @Override
@@ -38,5 +39,3 @@ public class Even extends Game {
         return (randomValue % 2 == 0 && answer.equals("yes")) | (randomValue % 2 != 0 && answer.equals("no"));
     }
 }
-
-

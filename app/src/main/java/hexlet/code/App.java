@@ -21,7 +21,7 @@ public class App {
                 Even even = new Even();
                 even.game();
                 break;
-            case 3:
+            default:
                 break;
         }
         s.close();
