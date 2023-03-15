@@ -22,7 +22,7 @@ public interface Engine {
                 gameCount++;
                 System.out.println("Correct!");
             } else {
-                winGame = gameCount == 2;
+                winGame = answer.equals(correctAnswer);
                 gameMusGoOn = false;
             }
         }
@@ -34,4 +34,3 @@ public interface Engine {
                 + correctAnswer + "'." + "\n" + "Let's try again, " + name + "!";
     }
 }
-
