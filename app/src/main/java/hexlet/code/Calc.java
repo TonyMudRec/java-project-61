@@ -1,3 +1,5 @@
+package hexlet.code;
+
 public class Calc implements Engine {
     @Override
     public String getDescription() {

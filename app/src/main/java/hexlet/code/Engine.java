@@ -29,7 +29,7 @@ public interface Engine {
         System.out.println(endGame(Cli.name, answer, winGame, correctAnswer));
     }
 
-    public default String endGame(String name, String answer, boolean winGame, String correctAnswer) {
+    default String endGame(String name, String answer, boolean winGame, String correctAnswer) {
         return winGame ? "Congratulations, " + name + "!" : "'" + answer + "' is wrong answer ;(. Correct answer was '"
                 + correctAnswer + "'." + "\n" + "Let's try again, " + name + "!";
     }
