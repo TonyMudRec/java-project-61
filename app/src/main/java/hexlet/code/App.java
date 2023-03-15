@@ -11,18 +11,17 @@ public class App {
         System.out.println("1 - Greet");
         System.out.println("2 - Even");
         System.out.println("3 - Exit");
+        System.out.print("Your choice: ");
         int gameChoice = s.nextInt();
-        System.out.println("Your choice: " + gameChoice + "\n");
+
         switch (gameChoice) {
-            case 1:
-                Cli.greetings();
-                break;
-            case 2:
+            case 1 -> Cli.greetings();
+            case 2 -> {
                 Even even = new Even();
-                even.game();
-                break;
-            default:
-                break;
+                even.process();
+            }
+            default -> {
+            }
         }
         s.close();
     }
