@@ -1,3 +1,5 @@
+package hexlet.code;
+
 public class GCD implements Engine {
     @Override
     public String getDescription() {
