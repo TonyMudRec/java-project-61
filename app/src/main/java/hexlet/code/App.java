@@ -13,7 +13,8 @@ public class App {
         System.out.println("3 - Calc");
         System.out.println("4 - GCD");
         System.out.println("5 - Progression");
-        System.out.println("6 - Exit");
+        System.out.println("6 - Prime");
+        System.out.println("7 - Exit");
         System.out.print("Your choice: ");
         int gameChoice = s.nextInt();
 
@@ -34,6 +35,10 @@ public class App {
             case 5 -> {
                 Progression pro = new Progression();
                 pro.process();
+            }
+            case 6 -> {
+                Prime prime = new Prime();
+                prime.process();
             }
             default -> {
             }
