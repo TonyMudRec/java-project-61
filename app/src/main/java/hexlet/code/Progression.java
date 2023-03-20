@@ -1,14 +1,12 @@
 package hexlet.code;
 
-public class Progression implements Engine {
+public class Progression {
 
-    @Override
-    public String getDescription() {
+    public static String progressionDescription() {
         return "What number is missing in the progression?";
     }
 
-    @Override
-    public String game() {
+    public static String progressionGame() {
         int progressionLength = (int) (Math.random() * 5) + 5;
         int hiddenPosition = (int) (Math.random() * progressionLength);
         int progressionCoefficient = (int) (Math.random() * 5) + 1;
