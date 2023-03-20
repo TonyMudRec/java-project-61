@@ -1,14 +1,12 @@
 package hexlet.code;
 
-public class Prime implements Engine {
+public class Prime {
 
-    @Override
-    public String getDescription() {
+    public static String primeDescription() {
         return "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
     }
 
-    @Override
-    public String game() {
+    public static String primeGame() {
         int value = (int) (Math.random() * 100) + 2;
         System.out.println("Question: " + value);
         System.out.print("Your answer: ");
@@ -21,3 +19,4 @@ public class Prime implements Engine {
         return "no";
     }
 }
+
