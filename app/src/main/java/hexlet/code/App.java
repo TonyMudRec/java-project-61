@@ -17,32 +17,7 @@ public class App {
         System.out.println("7 - Exit");
         System.out.print("Your choice: ");
         int gameChoice = s.nextInt();
-
-        switch (gameChoice) {
-            case 1 -> Cli.greetings();
-            case 2 -> {
-                Even even = new Even();
-                even.process();
-            }
-            case 3 -> {
-                Calc calc = new Calc();
-                calc.process();
-            }
-            case 4 -> {
-                GCD gcd = new GCD();
-                gcd.process();
-            }
-            case 5 -> {
-                Progression pro = new Progression();
-                pro.process();
-            }
-            case 6 -> {
-                Prime prime = new Prime();
-                prime.process();
-            }
-            default -> {
-            }
-        }
+        Engine.process(gameChoice);
         s.close();
     }
 }
