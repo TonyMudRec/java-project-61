@@ -1,13 +1,12 @@
 package hexlet.code;
 
-public class GCD implements Engine {
-    @Override
-    public String getDescription() {
+public class GCD {
+
+    public static String gcdDescription() {
         return "Find the greatest common divisor of given numbers.";
     }
 
-    @Override
-    public String game() {
+    public static String gcdGame() {
         int randomValue1 = (int) (Math.random() * 100);
         int randomValue2 = (int) (Math.random() * 100);
         int dividend = Math.max(randomValue1, randomValue2);
