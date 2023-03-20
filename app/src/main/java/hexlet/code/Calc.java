@@ -1,13 +1,12 @@
 package hexlet.code;
 
-public class Calc implements Engine {
-    @Override
-    public String getDescription() {
+public class Calc {
+
+    public static String calcDescription() {
         return "What is the result of the expression?";
     }
 
-    @Override
-    public String game() {
+    public static String calcGame() {
         int randomValue1 = (int) (Math.random() * 100);
         int randomValue2 = (int) (Math.random() * 10);
         int randomExpression = 0;
