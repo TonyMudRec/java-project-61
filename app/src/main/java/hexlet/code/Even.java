@@ -1,16 +1,14 @@
 package hexlet.code;
 
-public class Even implements Engine {
+public class Even {
 
-    int randomValue;
+    static int randomValue;
 
-    @Override
-    public String getDescription() {
+    public static String evenDescription() {
         return "Answer 'yes' if the number is even, otherwise answer 'no'.";
     }
 
-    @Override
-    public String game() {
+    public static String evenGame() {
         randomValue = (int) (Math.random() * 100);
         System.out.println("Question: " + randomValue);
         System.out.print("Your answer: ");
