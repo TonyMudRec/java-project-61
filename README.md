@@ -4,3 +4,15 @@
 
 ***Demonstration game Even:***
 [here](https://asciinema.org/a/x3tk6PXZ1Pgd22JZVHxWPQC7N)
+
+***Demonstration game Calc:***
+[here](https://asciinema.org/a/F0KQ364b2cPVYjxJjJLWQ5PmX)
+
+***Demonstration game GCD:***
+[here](https://asciinema.org/a/IIoYzaADNQYYvxlA7XoWeIngJ)
+
+***Demonstration game Progression:***
+[here](https://asciinema.org/a/UXKRsrpHfLiGgA7gUfzodToue)
+
+***Demonstration game Prime:***
+[here](https://asciinema.org/a/kDG487QvlwS1XaL2JIy7GoFYK)
