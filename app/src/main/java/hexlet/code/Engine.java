@@ -33,7 +33,8 @@ public class Engine {
                 Cli.greetings();
                 System.out.println(Prime.primeDescription());
             }
-            case 7 -> {
+            default -> {
+
             }
         }
         while (gameMusGoOn) {
@@ -52,6 +53,9 @@ public class Engine {
                 }
                 case 6 -> {
                     correctAnswer = Prime.primeGame();
+                }
+                default -> {
+
                 }
             }
             answer = App.s.next();
