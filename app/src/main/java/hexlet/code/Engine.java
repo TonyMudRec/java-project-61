@@ -1,5 +1,7 @@
 package hexlet.code;
 
+import hexlet.code.games.*;
+
 public class Engine {
 
     public static void process(int gameChoice) {
