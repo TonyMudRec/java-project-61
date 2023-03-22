@@ -14,6 +14,7 @@ public class Engine {
         switch (gameChoice) {
             case 1 -> {
                 Cli.greetings();
+                return;
             }
             case 2 -> {
                 Cli.greetings();
@@ -36,7 +37,7 @@ public class Engine {
                 System.out.println(Prime.primeDescription());
             }
             default -> {
-
+                return;
             }
         }
         while (gameMusGoOn) {
@@ -57,7 +58,7 @@ public class Engine {
                     correctAnswer = Prime.primeGame();
                 }
                 default -> {
-
+                    return;
                 }
             }
             answer = App.s.next();
