@@ -1,5 +1,3 @@
-app/.gradle/*
-app/settings.gradle
 app/.idea/*
 app/build/*
 .idea/*
