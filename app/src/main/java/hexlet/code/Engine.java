@@ -21,7 +21,7 @@ public class Engine {
         switch (gameChoice) {
             case 1:
                 Cli.greetings();
-                break;
+                return;
             case 2:
                 Cli.greetings();
                 System.out.println(Even.evenDescription());
@@ -43,8 +43,7 @@ public class Engine {
                 System.out.println(Prime.primeDescription());
                 break;
             default:
-                break;
-
+                return;
         }
         while (gameMusGoOn) {
             switch (gameChoice) {
@@ -76,9 +75,7 @@ public class Engine {
                 gameMusGoOn = false;
             }
         }
-        System.out.println(
-
-                endGame(Cli.getName(), answer, winGame, correctAnswer));
+        System.out.println(endGame(Cli.getName(), answer, winGame, correctAnswer));
         S.close();
     }
 

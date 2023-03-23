@@ -12,7 +12,7 @@ public class Cli {
 
     public static void greetings() {
         System.out.println("Welcome to the Brain Games!");
-        System.out.println("May I have your name?");
+        System.out.print("May I have your name? ");
         name = S.next().toLowerCase();
         name = name.substring(0, 1).toUpperCase() + name.substring(1);
         System.out.println();
