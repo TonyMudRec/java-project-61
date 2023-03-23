@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class App {
 
-    static Scanner s = new Scanner(System.in);
+    private static final Scanner S = new Scanner(System.in);
 
     public static void main(String[] args) {
         System.out.println("Please enter the game number and press Enter.");
@@ -16,8 +16,8 @@ public class App {
         System.out.println("6 - Prime");
         System.out.println("7 - Exit");
         System.out.print("Your choice: ");
-        int gameChoice = s.nextInt();
+        int gameChoice = S.nextInt();
         Engine.process(gameChoice);
-        s.close();
+        S.close();
     }
 }
