@@ -9,15 +9,8 @@ import hexlet.code.games.Progression;
 import java.util.Scanner;
 
 public class Engine {
-    private static final Scanner S = new Scanner(System.in);
 
     public static void process(int gameChoice) {
-        int gameCount = 0;
-        boolean winGame = false;
-        boolean gameMusGoOn = true;
-        String correctAnswer = null;
-        String answer = null;
-
         switch (gameChoice) {
             case 1:
                 Cli.greetings();
@@ -25,47 +18,54 @@ public class Engine {
             case 2:
                 Cli.greetings();
                 System.out.println(Even.evenDescription());
+                game(gameChoice);
                 break;
             case 3:
                 Cli.greetings();
                 System.out.println(Calc.calcDescription());
+                game(gameChoice);
                 break;
             case 4:
                 Cli.greetings();
                 System.out.println(GCD.gcdDescription());
+                game(gameChoice);
                 break;
             case 5:
                 Cli.greetings();
                 System.out.println(Progression.progressionDescription());
+                game(gameChoice);
                 break;
             case 6:
                 Cli.greetings();
                 System.out.println(Prime.primeDescription());
+                game(gameChoice);
                 break;
             default:
-                return;
         }
+
+    }
+
+    public static void game(int gameChoice) {
+        Scanner s = new Scanner(System.in);
+        int gameCount = 0;
+        boolean winGame = false;
+        boolean gameMusGoOn = true;
+        String correctAnswer = null;
+        String answer = null;
+
         while (gameMusGoOn) {
-            switch (gameChoice) {
-                case 2:
-                    correctAnswer = Even.evenGame();
-                    break;
-                case 3:
-                    correctAnswer = Calc.calcGame();
-                    break;
-                case 4:
-                    correctAnswer = GCD.gcdGame();
-                    break;
-                case 5:
-                    correctAnswer = Progression.progressionGame();
-                    break;
-                case 6:
-                    correctAnswer = Prime.primeGame();
-                    break;
-                default:
-                    break;
+            if (gameChoice == 2) {
+                correctAnswer = Even.evenGame();
+            } else if (gameChoice == 3) {
+                correctAnswer = Calc.calcGame();
+            } else if (gameChoice == 4) {
+                correctAnswer = GCD.gcdGame();
+            } else if (gameChoice == 5) {
+                correctAnswer = Progression.progressionGame();
+            } else {
+                correctAnswer = Prime.primeGame();
             }
-            answer = S.next();
+            answer = s.next();
             gameMusGoOn = answer.equals(correctAnswer);
             if (gameMusGoOn && gameCount < 2) {
                 gameCount++;
@@ -76,7 +76,6 @@ public class Engine {
             }
         }
         System.out.println(endGame(Cli.getName(), answer, winGame, correctAnswer));
-        S.close();
     }
 
     public static String endGame(String name, String answer, boolean winGame, String correctAnswer) {

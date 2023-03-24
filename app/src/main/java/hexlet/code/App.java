@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class App {
 
-    private static final Scanner S = new Scanner(System.in);
-
     public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+
         System.out.println("Please enter the game number and press Enter.");
         System.out.println("1 - Greet");
         System.out.println("2 - Even");
@@ -16,8 +16,8 @@ public class App {
         System.out.println("6 - Prime");
         System.out.println("7 - Exit");
         System.out.print("Your choice: ");
-        int gameChoice = S.nextInt();
+        int gameChoice = s.nextInt();
         Engine.process(gameChoice);
-        S.close();
+        s.close();
     }
 }

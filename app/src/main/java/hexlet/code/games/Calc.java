@@ -9,8 +9,8 @@ public class Calc {
     public static String calcGame() {
         int randomValue1 = (int) (Math.random() * 100);
         int randomValue2 = (int) (Math.random() * 10);
-        int randomExpression = 0;
-        String expression = null;
+        int randomExpression;
+        String expression;
 
         if (Math.random() < 0.3) {
             randomExpression = randomValue1 + randomValue2;
